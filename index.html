@@ -1,146 +1,236 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      :root {
-        --bg-color: #f0f0f0;
-        --text-color: #333;
-        --link-color: #007bff;
-        --border-color: #ccc;
-        --button-color: #007bff;
-        --button-text: white;
-      }
-      [data-theme="dark"] {
-        --bg-color: #333;
-        --text-color: #f0f0f0;
-        --link-color: #66ccff;
-        --border-color: #666;
-        --button-color: #66ccff;
-        --button-text: black;
-      }
-      body {
-        font-family: Arial, sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-      h1 {
-        text-align: center;
-      }
-      h2 {
-        color: var(--link-color);
-        text-align: center;
-      }
-      p {
-        margin: 10px auto;
-        max-width: 800px;
-        text-align: justify;
-      }
-      ul {
-        list-style: none;
-        margin: 0 auto;
-        max-width: 600px;
-      }
-      li {
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-      }
-      a {
-        display: block;
-        text-decoration: none;
-        color: var(--link-color);
-        flex-grow: 1;
-      }
-      button {
-        display : inline-block; 
-         width : 80px; 
-         height : 40px; 
-         padding : 5px 10px; 
-         border : none; 
-         border-radius : 5px; 
-         background-color : var(--button-color); 
-         color : var(--button-text); 
-         cursor : pointer
-       } 
-       @media (min-width : 768px) {ul {max-width : 800px; display : grid; grid-template-columns : repeat(2, 1fr); grid-gap : 20px; animation-name : slide-in-left, slide-in-right; animation-duration : .5s; animation-timing-function:cubic-bezier(.25,.46,.45,.94); animation-fill-mode:both} ul li:nth-child(odd) {animation-name : slide-in-left} ul li:nth-child(even) {animation-name : slide-in-right}} @keyframes slide-in-left {from {transform : translateX(-100%)} to {transform : translateX(0)}} @keyframes slide-in-right {from {transform : translateX(100%)} to {transform : translateX(0)}} @keyframes fade-in {from {opacity : 0} to {opacity : 1}}
-      footer {
-         margin-top : 20px; 
-         padding-top : 10px; 
-         border-top : 1px solid var(--border-color); 
-         text-align : center
-       } 
-       .toggle-container {display:none}
-    </style>
-    <title>YouTube Revanced</title>
-  </head>
-  <body>
-    <h1>YouTube Revanced</h1>
-    <div class="toggle-container">
-     <input type="checkbox" id="theme-toggle">
-     <label for="theme-toggle">
-      <span>Light Mode</span>
-      <span>Dark Mode</span>
-     </label>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ReVanced</title>
+  <meta content="" name="Revanced là phiên bản YouTube đã sửa đổi cho phép bạn sử dụng các tính năng cao cấp mà không cần đăng ký YouTube Premium">
+  <meta content="" name="Revanced">
+  <meta property="og:image" content="assets/img/about.jpg">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="" class="logo d-flex align-items-center">
+        <span>Revanced</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Revanced</a></li>
+          <li><a class="nav-link scrollto" href="#about">Giới thiệu</a></li>
+          <li><a class="nav-link scrollto" href="#values">Mục tiêu</a></li>
+          <li><a class="nav-link scrollto" href="#downloads">Tải về</a></li>
+          <li><a class="getstarted scrollto" href="#about">Bắt đầu</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-    <h2>🌟 Welcome to the my download YouTube Revanced site🌟</h2>
-    <p>Revanced is a modded version of YouTube that allows you to use premium features without subscribing to YouTube Premium, such as blocking ads, playing in the background, downloading videos and more. </p>
-    <p>To use Revanced, you need to install mMicroG, a modded version of MicroG that allows you to log in to your Google account on YouTube. You can download mMicroG from the list below.</p>
-    <p>You can visit the my GitHub repository here:</p>
-    <p><a href="https://github.com/luxysiv/revanced-nonroot">luxysiv/revanced-nonroot</a></p>
-    <div id="region-1">
-    <p style="font-weight: bold; font-style: iitalic; color: red; text-align: center;">YouTube Revanced</p>
-    <ul id="file-list-1"></ul>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">ReVanced</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Revanced là phiên bản sửa đổi của YouTube cho phép bạn sử dụng các tính năng cao cấp mà không cần đăng ký YouTube Premium, chẳng hạn như chặn quảng cáo, phát trong nền, tải xuống video và hơn thế nữa.</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Bắt đầu</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid rounded-image" alt="">
+        </div>
+      </div>
     </div>
-    <div id="region-2">
-    <p style="font-weight: bold; font-style: italic;color: red; text-align: center;">mMicroG</p>
-    <ul id="file-list-2"></ul>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+  <div class="row gx-0">
+
+    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="content">
+        <h3>Về Revanced và chúng tôi</h3>
+        <h2>ReVanced ra đời từ sự ngừng hoạt động của Vanced và mục tiêu của chúng tôi là tiếp tục di sản của những gì Vanced để lại.</h2>
+        <p>
+          Chúng tôi đã tạo ra một nơi để tự động thêm các bản vá của Revanced và tạo ra tệp apk khi Revanced cập nhật. Bạn có thể truy cập kho lưu trữ GitHub của chúng tôi để xem chi tiết.
+        </p>
+        <div class="text-center text-lg-start">
+          <a href="https://github.com/luxysiv/revanced-nonroot" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+            <span>Github</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <!-- Thêm nút mới -->
+          <a href="#downloads" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center" style="margin-left: 10px; margin-top: 5px;">
+            <span>Tải về</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
     </div>
-    <script>
-    const themeToggle = document.getElementById('theme-toggle');
-     themeToggle.addEventListener('change', function() {
-       document.documentElement.toggleAttribute('data-theme', 'dark');
-     });
-    const sources = [
-      'https://api.github.com/repos/luxysiv/revanced-nonroot/releases/latest',
-      'https://api.github.com/repos/ayushTNM/mMicroG/releases/latest'
-    ];
-    function createListItem(asset, sourceIndex, regionId) {
-      const listItem = document.createElement('li');
-      listItem.id = 'file-' + sourceIndex + '-' + asset.id; 
-      const downloadLink = document.createElement('a');
-      downloadLink.href = asset.browser_download_url;
-      downloadLink.textContent =
-        asset.name + ' (' + (asset.size / 1024 / 1024).toFixed(2) + ' MB)';
-      const downloadButton = document.createElement('button');
-      downloadButton.textContent = 'Download';
-      downloadButton.onclick = function () {
-        window.open(downloadLink.href);
-      };
-      listItem.appendChild(downloadLink);
-      listItem.appendChild(downloadButton);
-      const fileList = document.getElementById('file-list-' + regionId);
-      fileList.appendChild(listItem);
-      return listItem;
-    }
-    sources.forEach((source, index) => {
-      fetch(source)
-        .then((response) => response.json())
-        .then((data) => {
-          data.assets.forEach((asset) => {
-            if (!asset.name.endsWith('.txt')) {
-              const listItem = createListItem(asset, index, index + 1);
-            }
-          });
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/about.jpg" class="img-fluid rounded-image" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Values Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Mục tiêu</h2>
+          <p>Revanced sinh ra để làm gì?</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <img src="assets/img/values-1.png" class="img-fluid" alt="">
+              <h3>Không có quảng cáo</h3>
+              <p>Chúng tôi mong muốn cung cấp các bản vá không có quảng cáo cho càng nhiều ứng dụng càng tốt. Chúng tôi muốn người dùng có trải nghiệm không gây phiền nhiễu.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <img src="assets/img/values-2.png" class="img-fluid" alt="">
+              <h3>Hỗ trợ</h3>
+              <p>Những người đóng góp trên khắp thế giới luôn điều chỉnh mã để hỗ trợ các phiên bản mới nhất của các ứng dụng Android.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="assets/img/values-3.png" class="img-fluid" alt="">
+              <h3>Tiếp nối Vanced</h3>
+              <p>Tiếp tục di sản Vanced không dễ dàng như bạn tưởng tượng. Nhóm ReVanced đang làm việc chăm chỉ để duy trì Vanced.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Values Section -->
+    
+    <!-- ======= Downloads Section ======= -->
+<section id="downloads" class="downloads">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h2>Tải Về</h2>
+        <h3>Để sử dụng Revanced, bạn cần cài đặt ReVanced GmsCore, phiên bản sửa đổi của GmsCore cho phép bạn đăng nhập vào tài khoản Google của mình trên YouTube. Bạn có thể tải xuống ReVanced GmsCore từ danh sách bên dưới.</h3>
+      </header>
+      <div class="row gy-4" data-aos="fade-left" id="downloads-list">
+        <!-- Các mục sẽ được thêm vào đây -->
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Lấy dữ liệu JSON từ revanced.php
+    fetch('https://t.timie.workers.dev')
+      .then(response => response.json())
+      .then(data => {
+        const downloadsList = document.getElementById('downloads-list');
+
+        // Lặp qua mỗi mục trong dữ liệu JSON và tạo phần tử HTML tương ứng
+        data.forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'col-lg-3 col-md-6';
+          div.setAttribute('data-aos', 'zoom-in');
+          div.setAttribute('data-aos-delay', '100');
+
+          div.innerHTML = `
+            <div class="box">
+              <h2>${item.repository}</h2>
+              <ul>
+                <h3>${item.namefile}</h3>
+                <li>Tên: ${item.name}</li>
+                <li>Dung lượng: ${item.size_mb} MB</li>
+              </ul>
+              <a href="${item.download_url}" class="btn-buy">Tải về</a>
+            </div>
+          `;
+
+          downloadsList.appendChild(div);
         });
-    });
-    </script>
-    <footer>
-      <p style="font-weight: bold; font-style: italic; text-align: center;">Created by<a href="https://github.com/luxysiv">Mạnh Dương</a></p>
-    </footer>
-  </body>
+      })
+      .catch(error => console.error('Lỗi:', error));
+  </script>
+<!-- End Downloads Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright">
+        &copy; 2024 <strong><span>Revanced</span></strong>. Auto Patch được tạo bởi Mạnh Dương
+      </div>
+      <div class="credits">
+        Thiết kế giao diện bởi <a href="https://dabeecao.org/">@dabeecao</a> dựa trên Bootstrap. YouTube là một trong những công ty con của Google LLC. Chúng tôi không liên kết với Google LLC hay YouTube
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
